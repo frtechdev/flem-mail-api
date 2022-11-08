@@ -1,0 +1,38 @@
+{
+  "name": "flem-mail-api",
+  "version": "1.0.0-221108",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 4040",
+    "build": "next build",
+    "docs": "jsdoc --readme README.md -c jsdoc-config.json",
+    "start": "next start",
+    "lint": "next lint",
+    "db-push:dev": "dotenv -e .env.development -- yarn prisma db push",
+    "db-seed:dev": "dotenv -e .env.development -- yarn prisma db seed",
+    "studio:dev": "dotenv -e .env.development -- yarn prisma studio",
+    "docker:build:latest": "docker build . -t ghcr.io/frtechdev/flem-mail-api:latest",
+    "docker:push:latest": "docker push ghcr.io/frtechdev/flem-mail-api:latest"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "dependencies": {
+    "next": "12.3.0",
+    "next-connect": "^0.13.0",
+    "nodemailer": "^6.7.8",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@prisma/client": "4.3.1",
+    "dotenv-cli": "^6.0.0",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.3.0",
+    "prisma": "^4.3.1",
+    "jsdoc": "^3.6.10",
+    "prisma-dbml-generator": "^0.9.1",
+    "clean-jsdoc-theme": "^3.3.3"
+  }
+}
