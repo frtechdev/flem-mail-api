@@ -1,1 +1,0 @@
-export { sendMailPortalPPE } from "./PortalPPE";
