@@ -53,7 +53,7 @@
 
 
     <title>
-      Home
+      FLEM Mail API
     </title>
 
     <!--[if lt IE 9]>
@@ -109,7 +109,7 @@
   <body>
 
     <nav class="navbar" id="navbar">
-      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">FLEM Mail API - Documentação</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><ul><li class="menu-li"><a href='https://frtechnologies.com.br' class='some-class menu-link' id='some-id' target='_blank'>Website</a></li><li class="menu-li"><a href='https://github.com/frtechdev/flem-mail-api/' class='some-class menu-link' id='some-id' target='_blank'>Github</a></li></ul><div class="accordion collapsed" id="7915302" > <h3 class="accordion-heading">Global<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="global.html#api">api</a></li><li class="accordion-list" id=""><a href="global.html#getAnexos">getAnexos</a></li><li class="accordion-list" id=""><a href="global.html#mailHandler">mailHandler</a></li><li class="accordion-list" id=""><a href="global.html#prisma">prisma</a></li><li class="accordion-list" id=""><a href="global.html#sendMailPortalPPE">sendMailPortalPPE</a></li></ul> </div>
+      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">FLEM Mail API - Documentação</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><ul><li class="menu-li"><a href='https://frtechnologies.com.br' class='some-class menu-link' id='some-id' target='_blank'>Website</a></li><li class="menu-li"><a href='https://github.com/frtechdev/flem-mail-api/' class='some-class menu-link' id='some-id' target='_blank'>Github</a></li></ul><div class="accordion collapsed" id="7379346" > <h3 class="accordion-heading">Global<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="global.html#api">api</a></li><li class="accordion-list" id=""><a href="global.html#getAnexos">getAnexos</a></li><li class="accordion-list" id=""><a href="global.html#mailHandler">mailHandler</a></li><li class="accordion-list" id=""><a href="global.html#prisma">prisma</a></li><li class="accordion-list" id=""><a href="global.html#sendMailPortalPPE">sendMailPortalPPE</a></li></ul> </div>
       
         <div class="navbar-resize" id="navbar-resize">
           <div class="resize-dots-container">
@@ -161,7 +161,7 @@
 <a href=""><a href="https://github.com/frtechdev/flem-mail-api/graphs/contributors"><img src="https://img.shields.io/github/contributors/frtechdev/flem-mail-api" alt="Contributors"></a></a><br>
 <a href=""><img src="https://img.shields.io/github/last-commit/frtechdev/flem-mail-api" alt="Last Commit"></a>
 <a href=""><a href="https://github.com/frtechdev/flem-mail-api/fork"><img src="https://img.shields.io/github/forks/frtechdev/flem-mail-api" alt="Fork"></a> </a>
-<a href=""><img src="https://img.shields.io/badge/version-1.0.0-005bff" alt="Version"> </a>
+<a href=""><img src="https://img.shields.io/badge/version-1.0.1-005bff" alt="Version"> </a>
 <a href=""><a href="https://github.com/frtechdev/flem-mail-api/LICENSE"><img src="https://img.shields.io/github/license/frtechdev/flem-mail-api" alt="license"></a></a></p>
 <br>
 </div>
@@ -175,16 +175,8 @@
 <li><a href="#section-carac">Características</a></li>
 <li><a href="#section-specs">Especificações</a></li>
 <li><a href="#section-stack">Stack</a></li>
-<li><a href="#section-docs">Documentação</a>
-<ul>
-<li><a href="#section-diagrama">Diagrama de Banco de Dados</a></li>
-</ul>
-</li>
-<li><a href="#section-como-usar">Como usar este repositório</a>
-<ul>
-<li><a href="#section-vars">Variáveis de Ambiente</a></li>
-</ul>
-</li>
+<li><a href="#section-docs">Documentação</a></li>
+<li><a href="#section-como-usar">Como usar este repositório</a></li>
 <li><a href="#section-changelog">Notas de versão</a></li>
 <li><a href="#section-autores">Autores</a></li>
 <li><a href="#section-contato">Contato</a></li>
@@ -271,7 +263,7 @@
 <p>4 - Inicie o container</p>
 <p><code>docker run -d -p XXXX:3000 --name flem-mail-api:dev</code></p>
 <p>Altere o &quot;XXXX&quot; para uma porta externa de sua escolha. Por padrão, a porta interna é 3000.
-Para alterar a porta interna, altere a linha 45 do <a href="https://github.com/frtechdev/flem-mail-api/blob/main/Dockerfile">Dockerfile</a>.</p>
+Para alterar a porta interna, altere a linha <code>ENV PORT</code> do <a href="https://github.com/frtechdev/flem-mail-api/blob/main/Dockerfile">Dockerfile</a>.</p>
 <a name="section-vars">
 <h3>Variáveis de Ambiente</h3>
 </a>
@@ -315,36 +307,15 @@ Para alterar a porta interna, altere a linha 45 do <a href="https://github.com/f
 </tbody>
 </table>
 <br>
-<a name="section-test">
-<h3>Testando a Aplicação</h3>
-</a>
-<p>Para testar a aplicação, realize uma requisição HTTP utilizando uma Plataforma de API de sua preferência conforme os exemplos abaixo:</p>
-<table>
-<thead>
-<tr>
-<th>Método HTTP</th>
-<th>Rota de exemplo</th>
-<th>Função</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td><code>http://localhost:3000/api/Teste/downloadFile?fileId='2rdr454t365'&amp;referenceObjId='3354f45'</code></td>
-<td>Realiza o download de um arquivo específico, baseado no ID do arquivo e no ID de referência (BODY como JSON)</td>
-</tr>
-<tr>
-<td>POST</td>
-<td><code>http://localhost:3000/api/Teste/uploadFile</code></td>
-<td>Realiza o upload do arquivo (BODY como multipart/form-data)</td>
-</tr>
-</tbody>
-</table>
-<br>
 <hr>
 <a name="section-changelog">
 <h2>Notas de versão</h2>
 </a>
+<br>
+<h3>v1.0.1-221111</h3>
+<ul>
+<li>Atualização da Documentação</li>
+</ul>
 <br>
 <h3>v1.0.0-221108</h3>
 <ul>
