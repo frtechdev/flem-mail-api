@@ -1,6 +1,6 @@
 {
   "name": "flem-mail-api",
-  "version": "1.0.0-221108",
+  "version": "1.0.1-221111",
   "license": "MIT",
   "private": true,
   "scripts": {

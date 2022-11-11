@@ -11,7 +11,7 @@
 <a href="">[![Contributors](https://img.shields.io/github/contributors/frtechdev/flem-mail-api)](https://github.com/frtechdev/flem-mail-api/graphs/contributors)</a><br>
 <a href="">![Last Commit](https://img.shields.io/github/last-commit/frtechdev/flem-mail-api)</a>
 <a href="">[![Fork](https://img.shields.io/github/forks/frtechdev/flem-mail-api)](https://github.com/frtechdev/flem-mail-api/fork) </a>
-<a href="">![Version](https://img.shields.io/badge/version-1.0.0-005bff) </a>
+<a href="">![Version](https://img.shields.io/badge/version-1.0.1-005bff) </a>
 <a href="">[![license](https://img.shields.io/github/license/frtechdev/flem-mail-api)](https://github.com/frtechdev/flem-mail-api/LICENSE)</a>
 
 <br>
@@ -32,9 +32,7 @@ API que manipula as requisições e transferências de email das aplicações FL
 - [Especificações](#section-specs)
 - [Stack](#section-stack)
 - [Documentação](#section-docs)
-  - [Diagrama de Banco de Dados](#section-diagrama)
 - [Como usar este repositório](#section-como-usar)
-  - [Variáveis de Ambiente](#section-vars)
 - [Notas de versão](#section-changelog)
 - [Autores](#section-autores)
 - [Contato](#section-contato)
@@ -166,7 +164,7 @@ Documentação adicional pode ser encontrada [aqui](https://frtechdev.github.io/
 `docker run -d -p XXXX:3000 --name flem-mail-api:dev`
 
 Altere o "XXXX" para uma porta externa de sua escolha. Por padrão, a porta interna é 3000.
-Para alterar a porta interna, altere a linha 45 do [Dockerfile](https://github.com/frtechdev/flem-mail-api/blob/main/Dockerfile).
+Para alterar a porta interna, altere a linha `ENV PORT` do [Dockerfile](https://github.com/frtechdev/flem-mail-api/blob/main/Dockerfile).
 
 <a name="section-vars">
 
@@ -188,20 +186,6 @@ Para usar a aplicação, crie um arquivo .env com as seguintes variáveis de amb
 
 <br>
 
-<a name="section-test">
-
-### Testando a Aplicação
-
-</a>
-
-Para testar a aplicação, realize uma requisição HTTP utilizando uma Plataforma de API de sua preferência conforme os exemplos abaixo:
-
-| Método HTTP | Rota de exemplo                           | Função  |
-| ------------|-------------------------------------------|---------|
-| GET         | `http://localhost:3000/api/Teste/downloadFile?fileId='2rdr454t365'&referenceObjId='3354f45'` | Realiza o download de um arquivo específico, baseado no ID do arquivo e no ID de referência (BODY como JSON) | |
-| POST         | `http://localhost:3000/api/Teste/uploadFile` | Realiza o upload do arquivo (BODY como multipart/form-data) | |
-
-<br>
 <hr>
 
 <a name="section-changelog">
@@ -209,6 +193,12 @@ Para testar a aplicação, realize uma requisição HTTP utilizando uma Platafor
 ## Notas de versão
 
 </a>
+
+<br>
+
+### v1.0.1-221111
+
+- Atualização da Documentação
 
 <br>
 
